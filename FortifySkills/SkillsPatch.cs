@@ -142,7 +142,7 @@ namespace FortifySkills
 
             if (extra.fortifyLevel < 100f)
             {
-                extra.fortifyAccumulator = extra.fortifyAccumulator + (num * Mathf.Clamp((__instance.m_level - extra.fortifyLevel) * FortifySkillsPlugin.fortifyLevelRate.Value, 0.0f, FortifySkillsPlugin.fortifyMaxRate.Value));
+                extra.fortifyAccumulator = extra.fortifyAccumulator + (num * Mathf.Clamp((__instance.m_level - extra.fortifyLevel) * FortifySkillsPlugin.fortifyLevelRate, 0.0f, FortifySkillsPlugin.fortifyMaxRate));
 #if DEBUG
                 UnityEngine.Debug.Log("Fortify xp:" + extra.fortifyAccumulator);
 #endif
@@ -177,7 +177,7 @@ namespace FortifySkills
 #endif
                 }
             }
-            factor *= FortifySkillsPlugin.bonusRate.Value;
+            factor *= FortifySkillsPlugin.bonusRate;
 
         }
 
